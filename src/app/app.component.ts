@@ -1,3 +1,4 @@
+import { TennisPlayer } from './model/tennis-player';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'AppTennisPlayer';
+
+  player: TennisPlayer = {
+    name: 'Nadal',
+    firstName: 'Raphael',
+    rank: 3
+  };
+
+  click(){
+    this.player = {
+      name: 'Cilic',
+      firstName: 'Marin',
+      rank:3
+    };
+  }
+
+
+
 }
