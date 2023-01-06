@@ -1,2 +1,12 @@
 <div>Bonjour {{ player.firstName }} {{ player.name }}, ceci est un hello world, le projet démarre et se met à jour</div>
+
+<label>name:
+	<input [(ngModel)]="player.firstName" placeholder="Nom du joueur">
+</label>
+<div>
+  Prénom : {{ player.firstName }}
+</div>
+
 <button type="button" (click)="click()">Change le joueur</button>
+<button type="button" (click)="save()">Sauvegarde</button>
+
