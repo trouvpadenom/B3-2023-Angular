@@ -1,0 +1,8 @@
+<p>tennis-players-list works!</p>
+<ul *ngFor="let player of players">
+  <li (click)="playerClick(player)"> {{ player.firstName }} {{player.name}}  </li>
+</ul>
+<div *ngIf="selection!= null">
+  Joueur sélectionné : {{ selection.firstName}} {{ selection.name }}
+</div>
+
