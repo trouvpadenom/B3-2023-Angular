@@ -1,0 +1,25 @@
+<p>football-team works! : {{ footballTeamName }}</p>
+<form [formGroup]="footballTeamFormGroup" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Nom</label>
+    <input formControlName="name" type="text">
+    <div *ngIf="shouldShowError('name')">
+      Ce champ est obligatoire
+    </div>
+  </div>
+  <div>
+    <label>Coach</label>
+    <input formControlName="coach" type="text">
+  </div>
+  <div>
+    <label>Classement</label>
+    <input formControlName="position" type="number">
+    <div *ngIf="shouldShowError('position')">
+        La valeur doit être un entier positif
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="!isFormValid()">Valider</button>
+</form>
+
+
